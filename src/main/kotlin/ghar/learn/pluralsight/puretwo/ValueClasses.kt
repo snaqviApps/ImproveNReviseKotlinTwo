@@ -7,7 +7,11 @@ fun main(){
     val p0 = Person(Id("223-aba"), GivenName("Hamza"))
 }
 
-class Person(id: Id, givenName: GivenName){  }
+class Person(val id: Id, givenName: GivenName) {    // still not taking advantage of 'primitive' type, while creating 'Id'-class
+    fun provideIds(){
+        println("Id: $id")
+    }
+}
 
 class GivenName(val givenName: String) {
     init {

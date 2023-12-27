@@ -28,7 +28,7 @@ class Envelope<T> (val result: T?, val message: String?) {
 class GenPerson
 
 //class SqlEnvelope<T>(val count: Int, val data: T) where T:List<Any>  // limit the generic-type to 'list'
-class SqlEnvelope<T:List<Any> >(val count: Int, val data: T)    // (2nd param) same as 'above', but now generic-type is limited, unlike 'where' that can put multiple types as generic
+class SqlEnvelope<T: List<Any>> (val count: Int, val data: T)    // (2nd param) same as 'above', but now generic-type is limited, unlike 'where' that can put multiple types as generic
 
 
 

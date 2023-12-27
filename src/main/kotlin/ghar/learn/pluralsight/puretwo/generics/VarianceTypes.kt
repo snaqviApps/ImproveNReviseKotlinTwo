@@ -16,7 +16,7 @@ interface Producer<out T> {
 }
 
 fun produce(producer: Producer<Student>): Person {
-    val personProducer : Producer<Person> = producer    // Error (line# 15): Type mismatch. (compiler does not know that interface 'type' is Covariant
+    val personProducer : Producer<Person> = producer
                                                         // line# 13, with error --> Required:Producer<Person>, Found: Producer<Student>
     return personProducer.next()                        // corrected 'interface is on line# 14 with 'out' to mention 'Covarance' usint 'out'
                                                         // that tells Compiler that interface can only 'Produce (one-way), and cannot take 'in'
